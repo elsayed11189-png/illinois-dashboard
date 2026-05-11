@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Illinois Manufacturing Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    h1 { text-align:center; }
+    .chart { width: 600px; margin: 40px auto; }
+  </style>
+</head>
+
+<body>
+
+<h1>Illinois Manufacturing Dashboard</h1>
+
+<div class="chart">
+  <canvas id="revenueChart"></canvas>
+</div>
+
+<div class="chart">
+  <canvas id="employeeChart"></canvas>
+</div>
+
+<script>
+const revenueData = [120, 150, 180, 200, 250, 300, 320, 350, 370, 400];
+const employeeData = [50, 70, 90, 110, 140, 160, 180, 200, 230, 260];
+
+new Chart(document.getElementById("revenueChart"), {
+  type: 'line',
+  data: {
+    labels: ["2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+    datasets: [{
+      label: "Revenue (Millions)",
+      data: revenueData,
+      borderColor: "blue"
+    }]
+  }
+});
+
+new Chart(document.getElementById("employeeChart"), {
+  type: 'bar',
+  data: {
+    labels: ["2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+    datasets: [{
+      label: "Employees",
+      data: employeeData,
+      backgroundColor: "green"
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
