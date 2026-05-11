@@ -1,0 +1,19 @@
+{
+  "name": "illinois-dashboard",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "recharts": "^2.10.0",
+    "react-leaflet": "^4.2.1",
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
